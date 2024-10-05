@@ -1,0 +1,161 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SBAggroB';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.montserrat{
+    font-family: "Montserrat", system-ui;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+  }
+  
+
+html{
+    font-size: 62.5%;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+li{
+    list-style: none;
+}
+
+body{
+    background: black;
+}
+.header{
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+}
+
+.header .inner{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.header .inner .logo{
+    width: 20%;
+    font-size: 2.5rem;
+    color: white;
+    font-family: "Montserrat", system-ui;
+}
+
+.header .gnb-box{
+    display: flex;
+    gap: 6rem;
+    font-size: 2rem;
+}
+
+.header .gnb-box .gnb>a{
+    font-family: "Montserrat", system-ui;
+    font-weight: 900;
+    line-height: 100px;
+    color: white;
+    position: relative;
+}
+
+.header .gnb-box .gnb>a::before{
+    content: '';
+    width: 0;
+    height: 0.3rem;
+    background-color: white;
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+}
+
+.header .gnb-box .gnb:hover>.snb-wrap{
+    visibility: visible;
+}
+
+.header .gnb-box .gnb>a:hover::before{
+    width: 130%;
+    transition: 0.5s ease-in-out;
+}
+
+
+.header .gnb-box .gnb .snb-wrap{
+    position: absolute;
+    visibility: hidden;
+}
+.header .gnb-box .gnb .snb-wrap .snb-box{
+    display: flex;
+}
+
+
+.header .info{
+    font-family: "Montserrat", system-ui;
+    text-align: right;
+    width: 20%;
+    font-size: 2rem;
+    color: white;
+}
+
+.main{
+    width: 100%;
+    position: relative;
+}
+
+.main_visual::before{
+    content: '';
+    width: 100%;
+    height: 100vh;
+    /* background: linear-gradient(90deg, rgba(0,0,0,1) 20%, rgba(84,84,84,0) 50%, rgba(0,0,0,1) 80%); */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) ;
+    opacity: 100%;
+}
+
+
+.main video{
+    width: 100%;
+    height: 100vh;
+}   
+
+.main img{
+    width: 100%;
+    z-index: 2;
+}
+
+.video{
+    width: 705px;
+    height: 530px;
+    position: absolute;
+    left: 472px;
+    top: 237px;
+    box-shadow: inset 0px 0px 15px 5px black;
+    z-index: -1;
+}
+
+.video video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
